@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "dist",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "types": ["node"],
+    "lib": ["es7"],
+    "baseUrl": "src",
+    "rootDir": "src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@app/constants": ["constants.ts"],
+      "@app/environment": ["app/environment.ts"]
+    },
+    "removeComments": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "skipLibCheck": true
+  },
+  "includes": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
