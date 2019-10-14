@@ -3,6 +3,7 @@ import { ConsoleAdapter } from './adapters';
 import { BotController } from './controllers';
 import { BalanceDialog, ChangeLanguageDialog, DefaultDialog } from './dialogs';
 import { BotHandlerService, BotService } from './services';
+import { DialogFlowRecognizer } from './recognizers';
 
 @Module({
   controllers: [BotController],
@@ -11,6 +12,7 @@ import { BotHandlerService, BotService } from './services';
     BotHandlerService,
     ConsoleAdapter,
     BotService,
+    DialogFlowRecognizer,
     DefaultDialog,
     BalanceDialog,
     ChangeLanguageDialog
