@@ -1,8 +1,9 @@
-import { environment } from '@app/environment';
+
 import { Injectable, Logger } from '@nestjs/common';
 import { TurnContext } from 'botbuilder';
 import { DetectIntentResponse, SessionsClient } from 'dialogflow';
 import { IRecognitionResult } from '../interfaces';
+import { environment } from '../../environment';
 
 @Injectable()
 export class DialogFlowRecognizer {

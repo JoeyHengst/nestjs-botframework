@@ -1,7 +1,7 @@
 {
-  "name": "nodeconf-template",
+  "name": "virtual-assistant",
   "version": "1.0.0",
-  "description": "NodeConf Template",
+  "description": "virtual-assistant",
   "private": true,
   "engines": {
     "node": "^10.0.0",
@@ -10,15 +10,21 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "npm run tsc",
-    "start": "cd ./dist && node -r tsconfig-paths/register ./index.js",
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
     "dev": "nodemon",
-    "prettier": "prettier --write './**/*.*'",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "tsc": "tsc -p tsconfig.json",
     "tslint": "tslint -p tsconfig.json -c tslint.json",
     "dev:check": "npm run tslint && npm run tsc"
   },
   "dependencies": {
+    "@nestjs/cli": "^6.12.1",
     "@nestjs/common": "^6.3.1",
     "@nestjs/core": "^6.3.1",
     "@nestjs/platform-fastify": "^6.3.1",
@@ -27,6 +33,7 @@
     "botbuilder-storage-mongodb": "^0.9.5",
     "dialogflow": "^0.12.1",
     "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.0",
     "rxjs": "^6.5.2"
   },
   "devDependencies": {

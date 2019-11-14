@@ -1,5 +1,4 @@
-import { constants } from '@app/constants';
-import { environment } from '@app/environment';
+import { constants } from '../../../constants';
 import { Injectable, Logger } from '@nestjs/common';
 import {
   ConversationState,

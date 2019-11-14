@@ -1,4 +1,4 @@
-import { environment } from '@app/environment';
+
 import { Injectable, Logger } from '@nestjs/common';
 import { ActivityHandler, TurnContext } from 'botbuilder';
 import { DialogContext, DialogTurnStatus } from 'botbuilder-dialogs';
